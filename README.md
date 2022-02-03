@@ -17,3 +17,10 @@ npx create-react-app
 
 npm start
 
+To install routing in react
+
+npm i react-router-dom
+
+npm i mongoose (to install using nodejs project)
+
+npm i cors

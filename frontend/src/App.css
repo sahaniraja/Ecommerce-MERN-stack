@@ -1,10 +1,47 @@
-.App {
-  text-align: center;
+.navbar-ul{
+  margin: 0;
+  padding: 5px;
+  background-color: #61dafb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-ul li{
+  display: inline-block;
+  padding: 10px;
+}
+
+.navbar-ul li a{
+  color: aliceblue;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #61dafb;
+}
+
+.signupform{
+  margin-left: 30%;
+}
+
+.inputBox{
+  display: Block;
+  margin: 25px;
+  padding: 7px;
+  width: 300px;
+  border: 1px solid skyblue;
+}
+
+.signupbtn{
+  margin: 25px;
+  padding: 10px;
+  width: 150px;
+  background-color: skyblue;
+  border: 1px solid;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
