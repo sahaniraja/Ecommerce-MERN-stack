@@ -1,12 +1,34 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = ()=>{
 
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    const getData=()=>{
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        const auth = localStorage.getItem('usrdata');
+        if(auth)
+        {
+            navigate('/');
+        }
+    },[])
+
+    const getData=async ()=>{
         console.warn(name,email,password);
+        let output = await fetch("http://127.0.0.1:5000/signup",{
+            method:'post',
+            body:JSON.stringify({name,email,password}),
+            headers:{
+                'Content-Type': 'application/json'
+            },
+        });
+        output = await output.json();
+        console.warn(output);
+        localStorage.setItem("usrdata",JSON.stringify(output));
+        navigate('/');
     }
 
     return(
