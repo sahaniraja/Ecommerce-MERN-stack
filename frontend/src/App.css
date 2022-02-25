@@ -23,13 +23,15 @@
   background-color: #61dafb;
 }
 
-.signupform{
+.signupform, .signinform, .productform{
   margin-left: 30%;
 }
 
-.signinform{
-  margin-left: 30%;
-  margin-top: 10%;
+.invalidata{
+  color:red;
+  display: block;
+  margin-top: -20px;
+  margin-left: 20px;
 }
 
 .inputBox{
@@ -40,7 +42,7 @@
   border: 1px solid skyblue;
 }
 
-.signupbtn{
+.signupbtn, .signinbtn, .productbtn{
   margin: 25px;
   padding: 10px;
   width: 150px;
@@ -49,13 +51,40 @@
   cursor: pointer;
 }
 
-.signinbtn{
-  margin: 25px;
-  padding: 10px;
+.nav-right{
+  text-align: right;
+}
+
+.nav-logo{
+  width: 45px;
+  float: left;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 20px;
+}
+
+.product-list{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.product-list ul li{
+  display: inline-block;
+  border: 1px solid skyblue;
+  padding: 5px;
   width: 150px;
-  background-color: skyblue;
-  border: 1px solid;
-  cursor: pointer;
+}
+
+.product-list ul{
+  margin: 0px;
+}
+
+.searchBox{
+  width: 400px;
+  margin: 20px;
+  height: 40px;
+  border: 1px solid skyblue;
+  padding-left: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

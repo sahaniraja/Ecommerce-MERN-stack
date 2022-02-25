@@ -4,7 +4,10 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import AddProduct from './components/AddProduct';
+import ProductList from './components/ProductList';
 import PrivComponent from './components/PrivateComponent';
+import UpdateProduct from './components/UpdateProduct';
 
 function App() {
   return (
@@ -14,9 +17,9 @@ function App() {
         <Routes>
 
           <Route element={<PrivComponent/>}>
-          <Route path="/" element={<h1>Welcome to Home page</h1>} />
-          <Route path="/addproduct" element={<h1>Welcome to Add Product</h1>} />
-          <Route path="/updateproduct" element={<h1>Welcome to Update Product</h1>} />
+          <Route path="/" element={<ProductList />} />
+          <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/updateprd/:id" element={<UpdateProduct/>} />
           <Route path="/profile" element={<h1>Welcome to Profile</h1>} />
           </Route>
 

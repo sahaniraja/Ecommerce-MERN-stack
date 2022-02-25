@@ -26,9 +26,10 @@ const SignIn =()=>{
         });
         result = await result.json();
         console.warn(result);
-        if(result.name)
+        if(result.auth)
         {
-            localStorage.setItem("usrdata",JSON.stringify(result));
+            localStorage.setItem("usrdata",JSON.stringify(result.user));
+            localStorage.setItem("token",JSON.stringify(result.auth));
             navigate('/');
         }
         else
